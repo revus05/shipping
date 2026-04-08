@@ -6,14 +6,15 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "bunx prisma generate && bun run db:seed && next start",
+    "start": "next start",
     "lint": "biome check .",
     "format": "biome format --write .",
     "typecheck": "tsc --noEmit",
     "db:migrate": "prisma migrate dev",
     "db:seed": "bun prisma/seed.ts",
     "db:studio": "prisma studio",
-    "db:generate": "prisma generate"
+    "db:generate": "prisma generate",
+    "postinstall": "prisma generate && bun run db:seed"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
