@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "bunx prisma generate && bun run db:seed && next build",
+    "build": "next build",
     "start": "bunx prisma generate && bun run db:seed && next start",
     "lint": "biome check .",
     "format": "biome format --write .",

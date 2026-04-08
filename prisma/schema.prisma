@@ -113,8 +113,8 @@ model Order {
   notes       String?
   createdAt   DateTime    @default(now())
 
-  customer           Customer           @relation(fields: [customerId], references: [id])
-  supplier           Supplier           @relation(fields: [supplierId], references: [id])
+  customer           Customer            @relation(fields: [customerId], references: [id])
+  supplier           Supplier            @relation(fields: [supplierId], references: [id])
   items              OrderItem[]
   containers         Container[]
   proformaInvoices   ProformaInvoice[]
